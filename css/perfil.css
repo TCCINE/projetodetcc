@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --preto: rgb(10, 10, 10);
+  --azul: rgb(26, 159, 255);
+  --azul-escuro: rgb(0, 95, 140);
+  --cinza: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: var(--preto);
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s;
+  padding: .5rem 0
+}
+
+header a:hover {
+  color: var(--azul)
+}
+
+.logo-img {
+  height: 40px;
+  transition: opacity .3s
+}
+
+.logo-img:hover {
+  opacity: .8
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 2rem
+}
+
+.search-bar input {
+  width: 100%;
+  padding: .5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 25px;
+  outline: none
+}
+
+.links-uteis,
+.nav-links {
+  justify-content: space-between;
+  display: flex;
+  gap: 2rem;
+  list-style: none
+}
+
+.links-uteis a {
+  color: var(--azul);
+  text-decoration: none;
+  transition: text-decoration .3s
+}
+
+.links-uteis a:hover {
+  text-decoration: underline
+}
+
+/* ========== PERFIL ========= */
+.perfil-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.perfil-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--cinza);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+}
+
+.perfil-foto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--azul);
+}
+
+.perfil-detalhes h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-detalhes p {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.botao-editar {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--azul);
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.botao-editar:hover {
+  background-color: var(--azul-escuro);
+}
+
+/* ========== CATÁLOGO ========= */
+.catalogo-section {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.catalogo-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--azul);
+}
+
+.itens {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.filme-item {
+  min-width: 250px;
+  height: 140px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.filme-item:hover {
+  transform: translateY(-5px);
+}
+
+.filme-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.continuar-assistindo {
+  margin-top: 100px;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.continuar-assistindo .filme-item {
+  border: 2px solid var(--azul);
+}
+
+.progresso {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 4px;
+  background-color: var(--azul);
+}
